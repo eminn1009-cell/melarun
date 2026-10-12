@@ -1,0 +1,32 @@
+/* Melarun visual cleanup: restrained motion, cleaner cards, clearer hierarchy */
+:root{--radius:12px}
+html{scroll-behavior:smooth}
+.site-header{background:rgba(12,16,17,.88);border-bottom-color:#ffffff12}
+.brand-mark,.header-cta,.button,.icon-button,.category-card,.destination-card,.market-category,.catalog-panel,.ranking-card,.support-primary,.support-info-card,.account-card,.account-aside{border-radius:10px}
+.button-main{box-shadow:0 8px 28px #7bcbd71c}
+.hero h1 span{color:#a9e5e4}
+.category-card,.destination-card,.market-category,.support-info-card,.account-card,.account-aside{transition:transform .24s ease,border-color .24s ease,background-color .24s ease,box-shadow .24s ease}
+.category-card:hover,.destination-card:hover,.market-category:hover{transform:translateY(-4px);box-shadow:0 14px 34px #0003}
+.category-card{min-height:178px;background:linear-gradient(145deg,#1b2021,#141819 76%)}
+.category-card p{max-width:28ch;line-height:1.6}
+.category-state{letter-spacing:1px}
+.section{padding-top:78px}
+.section-head h2{letter-spacing:-.5px}
+.server-strip{border-bottom-color:#ffffff12}
+.server-fact{border-color:#ffffff12}
+.arena-section{border-color:#ffffff12}
+.page-hero{min-height:310px;border-radius:0 0 16px 16px}
+.page-hero-content>p:last-child{max-width:48ch}
+.market-category{min-height:84px}
+.market-category:hover{transform:translateY(-2px)}
+.catalog-empty,.ranking-empty{min-height:220px}
+.support-intro{padding-top:42px}
+.support-layout{gap:14px}
+.account-section{padding-top:40px}
+.toast{border-radius:10px}
+/* Entrance motion only where it helps; reduced-motion users get no movement. */
+@keyframes fade-up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.hero-copy,.page-hero-content,.server-fact,.category-card,.destination-card,.market-category,.catalog-panel,.ranking-card,.support-primary,.support-info-card,.account-card,.account-aside{animation:fade-up .55s both}
+.category-card:nth-child(2),.market-category:nth-child(2){animation-delay:.05s}.category-card:nth-child(3),.market-category:nth-child(3){animation-delay:.1s}.category-card:nth-child(4),.market-category:nth-child(4){animation-delay:.15s}.category-card:nth-child(5),.market-category:nth-child(5){animation-delay:.2s}.category-card:nth-child(6),.market-category:nth-child(6){animation-delay:.25s}
+@media(max-width:760px){.section{padding-top:58px}.page-hero{min-height:278px}.category-card{min-height:160px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
